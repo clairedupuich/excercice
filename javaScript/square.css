@@ -1,0 +1,21 @@
+#square {
+    width: 6em;
+    height: 6em;
+    background-color: brown;
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    top: 0;
+}   
+
+
+.carV {
+    width: 3em;
+    height: 18em;
+    background-color:green;
+    position: absolute;
+    display: inline-block;
+    left:20em;
+    top:0;
+}   
+
