@@ -1,5 +1,4 @@
- console.log(document.querySelector("#square").getBoundingClientRect());
- 
+ console.log(document.querySelector("#square").getBoundingClientRect()); 
 let x = 0;
 let y = 0;
 let carR = document.querySelector("#square");
