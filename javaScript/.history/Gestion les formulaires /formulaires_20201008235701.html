@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Manipulation des formulaires</title>
+    <link rel="stylesheet" href="formulaires.css">
+</head>
+
+<body>
+    <!--允许客户注册的表格-->
+    <form>
+        <label for="ps"><span><img src="téléchargement.jpeg"></span>搜索</label>  <input type="search" id= "ps" placeholder="produits"/> 
+        <h1>Formulaire d'inscription</h1>
+        <p>
+            <label for="pseudo">Pseudo/utilisateur</label> :
+            <input type="text" id="pseudo" name="pseudo" required>
+            <span id="aidePseudo"></span>
+        </p>
+        <p>
+            <label for="mdp">Mot de passe</label> :
+            <input type="password" name="mdp" id="mdp" required>
+            <span id="aideMdp"></span>
+        </p>
+        <p>
+            <label for="courriel">Courriel</label> :
+            <input type="email" name="courriel" id="courriel" required placeholder="utilisateur@domaine.fr">
+            <span id="aideCourriel"></span>
+        </p>
+        <p>
+            <input type="checkbox" name="confirmation" id="confirmation"><!--checkbox复选框 confirmation确认-->
+            <label for="confirmation">M'envoyer un courriel de confirmation</label>
+        </p>
+        <p>
+            <input type="radio" name="abonnement" id="abonewspromo" value="abonewspromo">
+            <label for="abonewspromo">M'abonner à la newsletter et aux promotions</label>
+            <br>
+            <input type="radio" name="abonnement" id="abonews" value="abonews订新闻">
+            <label for="abonews">M'abonner uniquement à la newsletter</label>
+            <br>
+            <input type="radio" name="abonnement" id="aborien不订" value="aborien" checked>
+            <label for="aborien">Ne pas m'abonner</label>
+            <br>
+        </p>
+        <p>
+            <label for="nationalite">Nationalité :</label>
+            <select name="nationalite" id="nationalite">
+                <option value="FR" selected>Française</option>
+                <option value="BE">Chinoise</option>
+                <option value="SUI">Suisse</option>
+                <option value="XX">Autre</option>
+            </select>
+        </p>
+
+        <input type="submit" value="Envoyer">
+        <input type="reset" value="Annuler">
+    </form>
+
+    <script type="text/javascript" src="formulaires.js"></script>
+</body>
+
+</html>
+<!--
+<input type="number" /> 
+number
+text
+password
+email
+url
+tel
+checkbox复选框 勾选此项或不勾选此项
+radio 从依次列出的项目中勾选一项，默认只能选其中一项不能多选。
+submit
+reset 重启 这里为取消
+以上都是input的type=""类型
+checked 已检查 一般要放在Annuler按钮的input中，提示。。。。。。。。。。。。。
+select 选择 有下拉框时代替input，与label组队，它不是自动结尾的，为<select> </select>，里面包含若干<option>。
+option 选项 select里的选项，一般要设置其value值。
+selected 已选 放在option里，表示此项被默认选中。
+email类型input里的placeholder是。。。您可以使用来指示该字段的内容 placeholder  。访客在字段中单击后，该指示将消失。
+
+input里的name是为PHP文件准备的，这将使您（例如在PHP中）识别信息的来源
+要将标签链label接到该字段input或 select 或textarea ，您必须为其赋予一个属性for  ，该属性应 具有与该id  字段相同的值
+
+一些其他属性
+您可以向标记添加许多其他属性 <input />  以自定义其操作：
+您可以用 size  ;
+您可以限制可以输入的字符数 maxlength  ；
+您可以使用value  ；使用默认值预填充字段 ，访客不删除不会自动消失；
+您可以使用来指示该字段的内容 placeholder  。访客在字段中单击后，该指示将消失。
+您可以<textarea>  使用默认值对其进行预填充 。在这种情况下，我们不使用属性 value  ：我们只是在开始标记和结束标记之间编写默认文本！
+-->
