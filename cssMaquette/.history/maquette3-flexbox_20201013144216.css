@@ -1,0 +1,158 @@
+body {
+    font-size: medium;
+    font-weight: ;
+    font-family: Roboto, Ubuntu, Arial, sans-serif;
+    background-color: rgb(82, 86, 89);
+    font-size: 0.8em;
+    line-height: 1.2em;
+    margin: 0;
+}   
+h1 {
+    font-size: 4.5em;
+    margin-bottom: 1.5em;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h2 {
+    
+    /* word-wrap: break-word; */
+    background-color: rgb(206, 206, 35);
+    writing-mode: vertical-lr;
+    writing-mode: sideways-lr;
+    font-size: 4em;
+    padding: 0.8em;
+    margin-bottom: 1em;
+    text-align: center;
+    font-size: x-large;  
+}
+
+.section1 > p {
+    font-size: 2em;
+    width: 10em;
+    line-height: 1.2em;
+    padding: 1.5em auto;
+    font-style: italic;
+}
+
+
+.page {
+    margin:1em 20em;
+    text-align: left;
+    border: 1px solid gray;
+    display: block;
+    box-shadow: 2px 2px 5px rgb(71, 71, 71);
+    
+}
+.pageprincipal{
+    padding: 2em 4em 5em;
+    background-color: snow;
+    line-height: 1.3em;
+    
+}
+.im {
+    background-image: url(image/Fallout-img.jpg);
+    background-size: 100% 100%;
+    padding: 3em 25em 7em 2em;
+    margin: 0;
+
+
+}
+.section1 {
+    
+    padding-left: 0.2em 2em;
+    text-align: start;
+    color: snow;
+}
+
+.fallout {
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.seven {
+    color: yellow;
+    font-weight: 50;
+    padding-left: 0.2em;
+}
+
+.line1 {
+    width: 0.5em;
+    height: 24em;
+    background-color: rgb(192, 178, 56);
+    float: left;
+    margin:1.5em 2em 3em 7em;
+}
+
+.np {
+    font-weight: bold;
+    font-style: italic;
+    color: black;
+}
+.ys {
+    font-weight: 900;
+    font-style: italic;
+    color: rgb(235, 252, 4);
+}
+.border {
+    display: inline-block;
+    height: 0.5em;
+    width: 0.5em;
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 2em;
+}
+.footer {
+    background-color: rgb(20, 19, 19);
+    width: 100%;
+    height: 15em;
+    overflow: visible;
+}
+#imagefooter{
+
+    position: ;
+    float: inline-start;
+    margin-left: 2em;
+    margin-top: -5em;
+
+}
+.tg {
+    color:white;
+    font-family: lobster;
+    font-style: italic;
+    text-align: center;
+    font-size: 2.5em;
+    float: left;
+    position: relative;
+   padding: 1.5em 0 1em 3em;
+}
+
+.inicon {
+    background-image: url(image/Fallout-icon.png);
+    padding: 2em;
+    margin-top: -4em;
+    margin-left: 10em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+.t1 {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: black;
+    padding-top: 0.8em;
+}
+.t3 ,
+.t4 {
+    font-weight: bolder;
+
+}
+.clear {
+    clear: both;
+}
