@@ -59,9 +59,9 @@ h2 {
 }
 .im {
     background-image: url(image/Fallout-img.jpg);
-/*
+/*     background-size: 100% 100%;
     padding: 3em 25em 7em 2em; */
-    margin: 2em;
+    margin: 0;
     background-position: center;
     background-size: cover;
 

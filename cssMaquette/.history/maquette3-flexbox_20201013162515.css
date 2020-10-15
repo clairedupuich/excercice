@@ -1,6 +1,6 @@
 body {
     font-size: medium;
-    
+    font-weight: ;
     font-family: Roboto, Ubuntu, Arial, sans-serif;
     background-color: rgb(82, 86, 89);
     font-size: 0.8em;
@@ -43,8 +43,7 @@ h2 {
 
 
 .page {
-    margin:1em auto;
-    width: 70%;
+    margin:1em 20em;
     text-align: left;
     border: 1px solid gray;
     display: block;
@@ -59,11 +58,10 @@ h2 {
 }
 .im {
     background-image: url(image/Fallout-img.jpg);
-/*
-    padding: 3em 25em 7em 2em; */
-    margin: 2em;
-    background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
+    padding: 3em 25em 7em 2em;
+    margin: 0;
+
 
 }
 .section1 {
@@ -113,10 +111,9 @@ h2 {
 .footer {
     background-color: rgb(20, 19, 19);
     width: 100%;
-  
+    height: 15em;
     overflow: visible;
     display: flex;
-    flex-wrap: wrap;
 }
 #imagefooter{
 
