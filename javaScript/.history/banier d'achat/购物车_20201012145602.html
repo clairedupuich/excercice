@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>panier d'achat</title>
+    <link rel="stylesheet" href="购物车.css">
+</head>
+
+<body>
+    <!--购物车打开页-->
+    <div id="car" class="car">
+
+        <div class="head_row hid">
+            <div class="check left"> <i onclick="checkAll()">√</i></div>
+            <div class="img left"> 全选tout sélectionner</div>
+            <div class="name left">商品名称nom du produit</div>
+            <div class="price left">单价Prix ​​unitaire</div>
+            <div class="number left">数量Quantité</div>
+            <div class="subtotal left">小计Total unitaire</div>
+            <div class="ctrl left">操作action</div>
+        </div>
+
+    </div>
+    <!--结算区域-->
+    <div id="sum_area">
+        <div id="pay">去结算Aller à la caisse</div>
+        <div id="pay_amout">合计total：<span id="price_num">0</span>元</div>
+    </div>
+    
+    <!--推广广告区域-->
+    <div id="box">
+        <h2 class="box_head"><span>买购物车中商品的人还买了La personne qui 
+            a acheté l'article dans le panier a également acheté</span></h2>
+
+        <ul>
+        </ul>
+    </div>
+
+
+    <script src="购物车.js"></script>
+</body>
+
+</html>

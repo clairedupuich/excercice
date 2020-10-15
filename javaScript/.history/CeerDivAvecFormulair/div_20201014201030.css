@@ -1,0 +1,14 @@
+div {
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+form {
+    float: left;
+}
+#vide {
+    width: 40%;
+    height: 25em;
+    float: right;
+    border: 2px solid black;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--oDiv.innerHTML -->
+    <div class="check left"> 
+        <i class="i_check" id="i_check" onclick="i_check()">√</i>
+    </div>
+    <div class="img left">
+        <img src="' + data[" imgUrl"] + '" width="80" height="80">
+    </div>
+    <div class="name left">
+        <span>' + data["proName"] + '</span></div>
+    <div class="price left"><span>' + data["proPrice"] + '元</span>
+    </div>
+    <div class="item_count_i">
+        <div class="num_count">
+            <div class="count_d"> - </div>
+            <div class="c_num"> 1 </div>
+            <div class="count_i"> + </div>
+        </div>
+    </div> 
+    <div class="subtotal left">
+        <span>' + data["proPrice"] + '元</span>
+    </div>
+    <div class="ctrl left">
+        <a href="javascript:;">×</a>
+    </div>
+</body>
+
+</html>

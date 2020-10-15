@@ -1,0 +1,1 @@
+let maDate = new Date

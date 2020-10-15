@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js localStorage实现简单购物车</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        input{
+            display: block;
+            outline: none;
+        }
+
+        #addPrice{
+            width: 650px;
+            margin: 40px auto;
+            background-color: #f5f5f5;
+            font-size: 12px;
+            overflow: hidden;
+        }
+        #addPrice ul li {
+            width: 150px;
+            height: 230px;
+            text-align: center;
+            margin: 10px 5px;
+            float: left;
+            position: relative;
+        }
+        #addPrice ul li span{
+            color: #ff9440;
+            line-height: 20px;
+
+        }
+        #addPrice ul li p{
+            color: #bab9bf;
+            line-height: 20px;
+        }
+        #addPrice ul  li input{
+            height: 35px;
+            width: 100%;
+            color: #fff;
+            outline: none;
+            border: none;
+            background-color: #ff6700;
+            display: none;
+            position: absolute;
+            bottom: 0;
+        }
+        #addPrice ul li:hover input{
+            display: block;
+        }
+        #list{
+            width: 650px;
+            margin: 50px auto 20px auto;
+            font-size: 12px;
+            float: left; /* 解决div上浮 */
+        }
+        #list table{
+            border-collapse: collapse;
+            text-align: center;
+            background-color: #fff;
+        }
+        #list table tr th{
+            font-size: 16px;
+            width: 400px;
+            height: 40px;
+        }
+        #list table tr td{
+            width: 400px;
+            height: 40px;
+        }
+        #list table tr td:nth-child(2){
+            color: #ff9440;
+        }
+    </style>
+    <script>
+        window.onload  = function () {
+            var btnCar = document.querySelectorAll('.btnCar');
+
+
+            // 载入所有存储在localStorage的数据
+            loadAll();
+            for (let i = 0; i < btnCar.length; i++) {
+                btnCar[i].onclick = function () {
+                    var goods = document.getElementsByClassName('goods')[i].innerHTML;
+                    var price = document.getElementsByClassName('price')[i].innerHTML;
+                    localStorage.setItem(price, goods );
+                    loadAll();
+                }
+            }
+
+
+            function loadAll(){
+                var list = document.getElementById("list");
+                if(localStorage.length>0){
+                    var result = "<table border='1'>";
+                    result += "<tr><th>商品</th><th>价格</th><th>操作</th></tr>";
+                    for(var i=0;i<localStorage.length;i++){
+                        var price = localStorage.key(i);
+                        var goods = localStorage.getItem(price);
+                        result += "<tr><td>"+price+"</td><td>"+goods+"</td>" +
+                            "<td><a href='javascript:;' id='del'>X</a></td></tr>";
+                    }
+                    list.innerHTML = result ;
+                }else{
+                    list.innerHTML = "购物车空空如也哦……";
+                }
+
+                // for循环删除购物车商品
+                let del = document.querySelectorAll('#del');
+                for (let i = 0; i < del.length; i++) {
+                    del[i].onclick = function () {
+                        var val = del[i].parentNode.parentNode;
+                        var children1 = val.children[0].innerText;
+                        var children2 = val.children[1].innerText;
+                        localStorage.removeItem(children1);
+                        // localStorage.clear();
+                        loadAll();
+                    }
+                }
+            }
+
+        };
+    </script>
+</head>
+<body>
+
+<div id="addPrice">
+    <ul id="UL">
+        <li>
+        <
+        img src="img/img01.jpg" alt="" id="img" class="img">
+        <h3 id="price" class="price">小米移动电源10000mAh</h3>
+        <span id="goods" class="goods">79元</span>
+        <p>1.8万人评价</p>
+        <input type="button" value="加入购物车" class="btnCar">
+    </li>
+        <li>
+           <
+           img src="img/img02.jpg" alt="" id="img" class="img">
+            <h3 id="price" class="price">小米移动电源10000mAh 高配版</h3>
+            <span id="goods" class="goods">199元</span>
+            <p>2.8万人评价</p>
+            <input type="button" value="加入购物车" class="btnCar">
+        </li>
+        <li>
+        <
+           img src="img/img03.jpg" alt="" id="img" class="img">
+            <h3 id="price" class="price">小米耳机</h3>
+            <span id="goods" class="goods">99元</span>
+            <p>4.2万人评价</p>
+            <input type="button" value="加入购物车" class="btnCar">
+        </li>
+        <li>
+        <
+             img src="img/img04.jpg" alt="" id="img" class="img">
+            <h3 id="price" class="price">小米活塞耳机 基础版</h3>
+            <span id="goods" class="goods">29元</span>
+            <p>3.6万人评价</p>
+            <input type="button" value="加入购物车" class="btnCar">
+        </li>
+   </ul>
+    <div id="list"></div>
+</div>
+
+
+</body>
+</html>

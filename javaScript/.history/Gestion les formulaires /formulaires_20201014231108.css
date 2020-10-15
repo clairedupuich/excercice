@@ -1,0 +1,14 @@
+#mdp:focus {
+    background-color: rgb(184, 253, 186);
+    border: 2px solid rgb(228, 22, 228);
+}
+
+
+#courriel {
+    transition: background-color 500ms; /* ??????????? */
+&:not(:focus):invalid {  /* 如果输入未处于状态:focus  且: invalid  为true ，则将  应用样式  。 */
+    background-color: red; 
+    border: 2px solid violet;
+    color: blue;
+}
+}

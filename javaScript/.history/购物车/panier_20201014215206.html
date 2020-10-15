@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js localStorage实现简单购物车</title>
+    <link rel="stylesheet" href="panier.css">
+</head>
+<body οnlοad="refreshTextarea()">
+
+    <body οnlοad="refreshTextarea()">
+        <fieldset title="加入购物车"><legend>加入购物车</legend>
+        请输入商品ID：<input type="text" id="addspid" name="spid" value="1"/>
+        请输入购买数量：<input type="text" id="spnum" name="spnum" value="1" style="width:30px"/>
+        <input type="button" name="add" value="加入购物车" οnclick="add2Storage()"/>
+         
+        <br/><br/>
+        <textarea id="goods" rows="3" cols="40">
+        [{"id":"1","num":1,"type":1},
+        {"id":"2","num":"2","type":1}]
+        </textarea>
+        <input type="button" name="add" value="批量加入购物车" οnclick="batchAdd2Cart()"/>
+        </fieldset>
+         
+        <fieldset title="删除商品"><legend>删除商品</legend>
+        请输入商品ID：<input type="text" id="removespid" name="removespid" value="1"/>
+        <input type="button" name="remove" value="从购物车移除" οnclick="myCart.remove( $('#removespid').val() );  refreshTextarea();"/>
+         
+        <br/><br/>
+        请输入商品ID列表：<input type="text" id="removespidlist" name="removespidlist" value="1,2"/>*逗号分隔
+        <input type="button" name="remove" value="（批量）移除" οnclick="batchRemoveCart()"/>
+         
+        <br/><br/>
+        <input type="button" name="remove" value="清空购物车" οnclick="myCart.removeAll();  refreshTextarea();"/>
+        </fieldset>
+         
+         
+        <fieldset title="修改数量"><legend>修改数量</legend>
+        购物车操作：请输入商品ID
+        <input type="text" id="plusGoodId" name="plusGoodId" value="1"  οnkeydοwn="enterKeyDown(event)"/>
+        <input type="button" name="minus" value="-" οnclick="myCart.addGoodNum( $('#plusGoodId').val(), -1 ); $('#goodNum').val( Number($('#goodNum').val())-1 ); refreshTextarea();" />
+        <input type="text" id="goodNum" name="goodNum" value="1" style="width:30px"  οnchange="goodNumChange(this)" />
+        <!-- οnkeydοwn="enterKeyDown2(event,this)" -->
+        <input type="button" name="plus" value="+" οnclick="myCart.addGoodNum( $('#plusGoodId').val(), 1 );  $('#goodNum').val( Number($('#goodNum').val()) +1 ); refreshTextarea();"/>
+        *输入商品ID或数量后请按回车
+        </fieldset>
+         
+        <fieldset title="查看购物车"><legend>查看购物车</legend>
+            <table  border="1">
+                <thead>
+                    <tr>
+                        <th>localStroage 的Cart 数据</th>
+                        <th>商品ID列表</th>
+                        <th>error</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><textarea id="cart" rows="8" cols="30"></textarea></td>
+                        <td><textarea id="goodIdList" rows="8" cols="30"></textarea></td>
+                        <td><textarea id="error" rows="8" cols="30"></textarea></td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+<script src="panier.js"></script> 
+</body>
+</html>

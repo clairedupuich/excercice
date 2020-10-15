@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="gbk"?>   
+
+
+function clickHandler(evt) {
+    var URL= "https://data.opendatasoft.com/api/records/1.0/search/?dataset=correspondance-code-insee-code-postal%40public&q="+document.getElementById('codepost').value+"&facet=insee_com&facet=nom_dept&facet=nom_region&facet=statut";
+    resetLog();
+    // Create XMLHttpRequest.
+    let xhr = new XMLHttpRequest();
+    appendLog("URL: " + URL);
+    appendLog("\n\n");
+    xhr.onprogress = function(progressEvent) {
+        console.log(progressEvent)
+        appendLog("onprogress! " + progressEvent);
+    }
+    // readyState (State of request):
+    // 0 - XMLHttpRequest.UNSENT
+    // 1 - XMLHttpRequest.OPENED
+    // 2 - XMLHttpRequest.HEADERS_RECEIVED
+    // 3 - XMLHttpRequest.LOADING
+    // 4 - XMLHttpRequest.DONE
+    xhr.onreadystatechange = function(event)  {
+        appendLog("onreadystatechange! readyState = " + xhr.readyState);
+        appendLog(" status = " + xhr.status);
+        appendLog(" statusText = " + xhr.statusText);
+    }
+    xhr.onload = function(progressEvent) {
+        appendLog("onload!");
+        appendLog(" status = " + xhr.status);
+        appendLog(" statusText = " + xhr.statusText);
+        appendLog(" ------ xhr.responseText ------: ");
+        appendLog(xhr.responseText);
+        let jsonData = JSON.parse(xhr.responseText);
+        // console.log(jsonData);
+        document.getElementById('result').innerHTML = "";
+        for(ville of jsonData.records){
+          let city = document.createElement('li');
+          city.innerHTML = ville.fields.nom_comm;
+          document.getElementById('result').appendChild(city);
+        }
+    }
+    xhr.onerror = function(progressEvent) {
+        appendLog("onerror!");
+        appendLog("Has Error!");
+    }
+    let async = true;
+    // Initialize It.
+    xhr.open("GET", URL, async);
+    // Send it (Without body data)
+    xhr.send();
+}
+function resetLog() {
+    document.getElementById('textarea-log').value = "";
+}
+function appendLog(msg) {
+    document.getElementById('textarea-log').value += "\n" + msg;
+}
+
+
+
+
+

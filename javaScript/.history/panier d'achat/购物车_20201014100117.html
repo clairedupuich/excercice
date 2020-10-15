@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>panier d'achat</title>
+    <link rel="stylesheet" href="购物车.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="header-logo">
+                <a class="logo ir" href="" title="supermarche de claire">logo avec un lien</a>
+            </div>
+            <div class="header-title" id="J_miniHeaderTitle">
+                <h2 style="font-size: 30px;">我的购物车</h2>
+            </div>
+            <div class="topbar-info" id="J_userInfo">
+                <a class="link" href="http://www.weichufeng.cn/login.jsp">登录</a><span class="sep">|</span><a class="link" href="http://www.weichufeng.cn/regist.jsp">注册</a></div>
+        </div>
+    </div>
+    <!--购物车打开页-->
+    <div id="car" class="car">
+
+        <div class="head_row hid">
+            <div class="check left"> <i onclick="checkAll()">√</i></div>
+            <div class="img left"> 全选tout sélectionner</div>
+            <div class="name left">商品名称nom du produit</div>
+            <div class="price left">单价Prix ​​unitaire</div>
+            <div class="number left">数量Quantité</div>
+            <div class="subtotal left">小计Total unitaire</div>
+            <div class="ctrl left">操作action</div>
+        </div>
+        <!--oDiv.innerHTML的位置-->
+        <!--
+        <div class="odiv">
+
+        </div>
+        -->
+    </div>
+    <!--结算区域-->
+    <div id="sum_area">
+        <div id="pay">去结算Aller à la caisse</div>
+        <div id="pay_amout">合计total：<span id="price_num">0</span>欧元俄</div>
+    </div>
+    
+    <!--推广广告区域-->
+    <div id="box">
+        <h2 class="box_head"><span>La personne qui a acheté l'article dans le panier a également acheté</span></h2>
+
+        <ul>
+        </ul>
+    </div>
+
+
+    <script src="购物车.js"></script>
+</body>
+
+</html>

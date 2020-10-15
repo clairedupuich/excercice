@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creer des elements</title>
+    <link rel="stylesheet" href="div.css">
+</head>
+<body>
+    <form action="" method="POST">
+<div class = "contentForm">
+    <label for = "elements">Nom element</label><br>
+    <select id ="elements" name="elements">
+        <option value="div">DIV</option>
+        <option value="p">P</option>
+        <option value="h1">H1</option>
+        <option value="section">SECTION</option>
+        <option value="a">A</option>
+        <option value="span">SPAN</option>
+        <option value="header">HEADER</option>
+        <option value="main">MAIN</option>
+        <option value="footer">FOOTER</option>
+    </select>
+</div>
+<div class = "contentForm">
+    <label for = "className">class Name</label><br>
+    <input id ="className" name="className" type="text">
+</div>
+<div class = "contentForm">
+    <label for = "idName">id Name</label><br>
+    <input id ="idName" name="idName" type="text">
+</div>
+<div class = "contentForm">
+    <label for = "lienName">lien</label><br>
+    <input id ="lienName" name="lienName" type="url">
+</div>
+<div class = "contentForm">
+    <label for = "cont">contrnue text</label><br>
+    <input id ="cont" name="cont" type="text">
+</div>
+<div class = "contentForm">
+    <label for = "parentName">choisz son parent</label><br>
+    <select id ="parentName" name="parentName" >
+        <option value = "body">body</option>
+</div>
+<button type="submit" class="btn" id>Submit</button>
+   <!--  <input type="submit" value="ajouter"> -->
+</form>
+<div id = "vide">    </div>
+
+
+
+    <script src="div.js"></script> 
+
+</body>
+</html>
